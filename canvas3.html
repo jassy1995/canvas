@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>can</title>
+</head>
+<body>
+	<canvas  id="mycanvas"  style="background-color:yellow";  width="400"  height="300" ></canvas>
+
+		
+	</canvas>
+
+</body>
+<script>
+	var c=document.getElementById("mycanvas");
+	var ctx=c.getContext("2d");
+	ctx.beginPath();
+	ctx.arc(200,150,80,0,2*Math.PI);
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.arc(200,150,50,0.56,0.78*Math.PI);
+	ctx.stroke();
+
+    ctx.beginPath();
+	ctx.moveTo(200,135);
+	ctx.lineTo(200,150);
+	ctx.stroke();
+
+	ctx.beginPath();
+    ctx.arc(170,118,3,0,2*Math.PI);
+    ctx.fillStyle = '#333';
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(230,118,3,0,2*Math.PI);
+    ctx.fillStyle = '#333';
+    ctx.fill();
+
+
+</script>
+</html>

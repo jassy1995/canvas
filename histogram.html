@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<canvas id="mycanvas" style="border:5px solid purple" width="520" height="400"></canvas></center>
+
+</center>
+
+	<script>
+		var canvas=document.getElementById("mycanvas");
+	    var b=canvas.getContext("2d");
+	         var x=10,
+	             y=398,
+	             c,
+	             d,
+	             e,
+	             f,
+	             h,
+	             h1,
+	             h2,
+	             h3,
+	             h4,
+	             h5,
+	             width=50,
+	             height,
+	             num=7;
+	             var start;
+	    function shows(){
+	    	b.clearRect(0,0,canvas.width,canvas.height)
+	    	start=new component(this.x,this.y-this.height,'blue',this.width,this.height)
+	    	start=new component(this.x+this.width,this.y-this.h,'red',this.width,this.h)
+	    	start=new component(this.x+this.width+50,this.y-this.h1,'green',this.width,this.h1)
+	    	start=new component(this.x+this.width+100,this.y-this.h2,'black',this.width,this.h2)
+	    	start=new component(this.x+this.width+150,this.y-this.height,'orange',this.width,this.height)
+	    	start=new component(this.x+this.width+200,this.y-this.h,'purple',this.width,this.h)
+            start=new component(this.x+this.width+250,this.y-this.h3,'cyan',this.width,this.h3)
+            start=new component(this.x+this.width+300,this.y-this.h4,'yellow',this.width,this.h4)
+            start=new component(this.x+this.width+350,this.y-this.h2,'pink',this.width,this.h2)
+            start=new component(this.x+this.width+400,this.y-this.h5,'red',this.width,this.h5)
+	    	
+	    }
+	    function play(){
+	    	shows();
+	    	c=Math.random()*canvas.height;
+	    	height=c;
+	    	d=Math.random()*canvas.height;
+	    	h=d;
+	    	e=Math.random()*canvas.height;
+	    	h1=e;
+	    	f=Math.random()*canvas.height;
+	    	h2=f;
+	    	d=Math.random()*canvas.height;
+	    	h3=d;
+	    	d=Math.random()*canvas.height;
+	    	h4=d;
+	    	c=Math.random()*canvas.height;
+	    	h5=c
+
+	    }
+	    setInterval(play,100)
+	    function component(x,y,color,width,height){
+	    	this.x=x;
+	    	this.y=y;
+	    	this.width=width;
+	    	this.height=height;
+	    	b.fillStyle=color;
+	    	b.fillRect(this.x,this.y,this.width,this.height)
+
+	    }
+		
+	</script>
+
+</body>
+</html>
